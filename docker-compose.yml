@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  derby:
+    image: adito/apache-derby
+    container_name: derby
+    ports:
+      - '1527:1527'
+      - '5000:5000'
+    volumes:
+      - derby-databases:/dbs
+      - derby-webgui:/webgui
+volumes:
+  derby-databases:
+  derby-webgui:
